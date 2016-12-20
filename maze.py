@@ -30,10 +30,10 @@ class Maze():
         self.grid[x][y] = 3
 
         # explore neighbors clockwise starting by the one on the right
-        if ((x < len(self.grid)-1 and search(x+1, y))
-                or (y > 0 and search(x, y-1))
-                or (x > 0 and search(x-1, y))
-                or (y < len(self.grid)-1 and search(x, y+1))):
+        if ((x < len(self.grid)-1 and self.search(x+1, y))
+                or (y > 0 and self.search(x, y-1))
+                or (x > 0 and self.search(x-1, y))
+                or (y < len(self.grid)-1 and self.search(x, y+1))):
             return True
         
         return False
