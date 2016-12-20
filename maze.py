@@ -48,14 +48,13 @@ def exportgrid(filename='maze'):
     f.close
 
 def importgrid(filename='maze'):
-    newgrid = []
+    grid = []
     with open(filename, 'r') as f:
         for line in f:
             xposition = ascii_to_num(line)
-            print xposition
             newlist = list(xposition)
-            newgrid.append(newlist)
-    grid = newgrid
+            grid.append(newlist)
+    print grid
 
 
 
